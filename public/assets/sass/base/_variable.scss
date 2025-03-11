@@ -1,7 +1,7 @@
 :root {
-  --theme-color         : #F47629;
-  --gr-color2           : #FD8900;
-  --title-color         : #101840;
+  --theme-color         : #6991AF;
+  --gr-color2           : #14ED56;
+  --title-color         : #1A222B;
   --body-color          : #666666;
   --smoke-color         : #F8F8F8;
   --smoke-color2        : #ECF1FF;
@@ -15,8 +15,8 @@
   --success-color       : #27AE60;
   --error-color         : #EB5757;
   --th-border-color     : #fff;
-  --title-font          : "Exo", sans-serif;
-  --body-font           : "Inter", sans-serif;
+  --title-font          : "Barlow", sans-serif;
+  --body-font           : "Barlow Semi Condensed", sans-serif;
   --icon-font           : "Font Awesome 6 Pro";
   --main-container      : 1320px;
   --container-gutters   : 24px;
@@ -87,7 +87,7 @@ $space-mobile         : var(--section-space-mobile);
 $space-mobile-extra: calc(var(--section-space-mobile) - 30px);
 
 
-// BG Color Mapping 
+// BG Color Mapping
 $bgcolorMap  : ();
 $bgcolorMap  : map-merge((
   "theme"    : $theme-color,
@@ -100,7 +100,7 @@ $bgcolorMap  : map-merge((
 ), $bgcolorMap);
 
 
-// Overlay Color Mapping 
+// Overlay Color Mapping
 $overlaycolorMap : ();
 $overlaycolorMap : map-merge((
   "theme"        : $theme-color,
@@ -112,7 +112,7 @@ $overlaycolorMap : map-merge((
 ), $overlaycolorMap);
 
 
-// Text Color Mapping 
+// Text Color Mapping
 $textColorsMap : ();
 $textColorsMap : map-merge((
   "theme"      : $theme-color,
@@ -126,7 +126,7 @@ $textColorsMap : map-merge((
 ), $textColorsMap);
 
 
-// Font Mapping 
+// Font Mapping
 $fontsMap    : ();
 $fontsMap    : map-merge((
   "icon"     : $icon-font,
