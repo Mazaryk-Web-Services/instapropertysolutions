@@ -112,7 +112,7 @@ Version: 1.0.0
   --error-color: #EB5757;
   --th-border-color: #fff;
   --title-font: "Barlow", sans-serif;
-  --body-font: "Barlow Semi Condensed", sans-serif;
+  --body-font: "Inter", sans-serif;
   --icon-font: "Font Awesome 6 Pro";
   --main-container: 1320px;
   --container-gutters: 24px;
@@ -1885,7 +1885,7 @@ textarea.is-invalid {
   text-align: center;
   background-color: var(--theme-color);
   color: var(--white-color);
-  font-family: var(--body-font);
+  font-family: var(--title-font);
   font-size: 15px;
   font-weight: 400;
   line-height: 1;
@@ -5570,7 +5570,7 @@ ol.wp-block-rss {
 /* Header 4 ---------------------------------- */
 .header-layout4 {
   --th-border-color: rgba(255, 255, 255, 0.2);
-  --body-bg: #101111;
+  --body-bg: #1A222B;
   --space: 48px;
   /* Extra large devices */
   /* Medium Large devices */
@@ -6289,11 +6289,11 @@ ol.wp-block-rss {
 /* footer 3 ---------------------------------- */
 .footer-layout3 {
   --th-border-color: rgba(255, 255, 255, 0.2);
-  background-color: #101111;
+  background-color: #1A222B;
 }
 
 .footer-contact-area.style-black {
-  background-color: #101111;
+  background-color: #1A222B;
   max-width: 100%;
   border-radius: 0;
 }
@@ -6321,7 +6321,7 @@ ol.wp-block-rss {
 }
 .footer-layout4 {
   --th-border-color: rgba(255, 255, 255, 0.2);
-  background-color: #1C244A;
+  background-color: #1A222B;
   /* Large devices */
 }
 .footer-layout4 .th-social a:not(:hover) {
@@ -6354,7 +6354,7 @@ ol.wp-block-rss {
 /* footer 5 ---------------------------------- */
 .footer-layout5 {
   --th-border-color: rgba(255, 255, 255, 0.2);
-  background-color: #1C244A;
+  background-color: #1A222B;
 }
 .footer-layout5 .th-social a:not(:hover) {
   background-color: rgba(255, 255, 255, 0.08);
@@ -8028,7 +8028,7 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 
 .hero-4 {
   overflow: hidden;
-  background-color: #101111;
+  background-color: #1A222B;
   background-size: auto;
   background-position: top center;
   /* Extra large devices */

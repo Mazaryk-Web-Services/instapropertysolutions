@@ -475,7 +475,7 @@
                 background-color: $theme-color;
             }
         }
-        
+
     }
 }
 @include lg {
@@ -685,7 +685,7 @@
         }
         .header-search {
             display: none;
-        }  
+        }
     }
 }
 
@@ -752,7 +752,7 @@
 /* Header 4 ---------------------------------- */
 .header-layout4 {
     --th-border-color: rgba(255, 255, 255, 0.2);
-    --body-bg: #101111;
+    --body-bg: #1A222B;
     --space: 48px;
     @include xxl {
         --space: 32px;

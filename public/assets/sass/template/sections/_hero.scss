@@ -76,10 +76,10 @@
         @include xxl {
             right: 0;
         }
-        @include ml { 
+        @include ml {
             max-width: 600px;
         }
-        @include xl { 
+        @include xl {
             max-width: 500px;
         }
         @include lg {
@@ -243,10 +243,10 @@
         @include xxl {
             right: 0;
         }
-        @include ml { 
+        @include ml {
             max-width: 500px;
         }
-        @include xl { 
+        @include xl {
             max-width: 500px;
         }
         @include lg {
@@ -385,10 +385,10 @@
         @include xxl {
             right: 1%;
         }
-        @include ml { 
+        @include ml {
             max-width: 500px;
         }
-        @include xl { 
+        @include xl {
             max-width: 500px;
         }
         @include lg {
@@ -567,7 +567,7 @@
 }
 .hero-4 {
     overflow: hidden;
-    background-color: #101111;
+    background-color: #1A222B;
     background-size: auto;
     background-position: top center;
     &:after {
@@ -596,10 +596,10 @@
             right: 1%;
             max-width: 600px;
         }
-        @include ml { 
+        @include ml {
             max-width: 560px;
         }
-        @include xl { 
+        @include xl {
             max-width: 500px;
         }
         @include lg {

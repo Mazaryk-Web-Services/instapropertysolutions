@@ -10,7 +10,7 @@
     text-align: center;
     background-color: $theme-color;
     color: $white-color;
-    font-family: $body-font;
+    font-family: $title-font;
     font-size: 15px;
     font-weight: 400;
     line-height: 1;
@@ -92,7 +92,7 @@
                 background-color: $white-color;
             }
         }
-    } 
+    }
     &.style6 {
         background-color: $title-color;
         &:hover {
@@ -102,7 +102,7 @@
                 background-color: $white-color;
             }
         }
-    } 
+    }
     &.btn-fw {
         width: 100%;
         &:before,
@@ -189,7 +189,7 @@
         &:before {
             background-color: $white-color;
         }
-        
+
     }
     &.style4 {
         background-color: $theme-color;
