@@ -11058,7 +11058,6 @@ span.select2-selection.select2-selection--single:focus {
   font-size: 18px;
   font-weight: 600;
   color: var(--white-color);
-  text-transform: capitalize;
   margin-bottom: -0.2em;
   max-width: 280px;
 }
