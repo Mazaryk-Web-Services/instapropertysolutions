@@ -1672,8 +1672,8 @@ textarea.is-invalid {
   padding: 0 0;
 }
 .th-mobile-menu ul li {
-  border-bottom: 1px solid var(--th-border-color);
   list-style-type: none;
+  text-align: center;
 }
 .th-mobile-menu ul li li:first-child {
   border-top: 1px solid var(--th-border-color);
@@ -1683,20 +1683,19 @@ textarea.is-invalid {
   position: relative;
   padding: 12px 0;
   line-height: 1.4;
-  font-size: 16px;
+  font-size: 20px;
   text-transform: capitalize;
   color: var(--title-color);
-  padding-left: 18px;
 }
-.th-mobile-menu ul li a:before {
-  content: "\f105";
-  font-family: var(--icon-font);
-  position: absolute;
-  left: 0;
-  top: 12px;
-  margin-right: 10px;
-  display: inline-block;
-}
+/*.th-mobile-menu ul li a:before {*/
+/*  content: "\f105";*/
+/*  font-family: var(--icon-font);*/
+/*  position: absolute;*/
+/*  left: 0;*/
+/*  top: 12px;*/
+/*  margin-right: 10px;*/
+/*  display: inline-block;*/
+/*}*/
 .th-mobile-menu ul li.th-active > a {
   color: var(--theme-color);
 }
