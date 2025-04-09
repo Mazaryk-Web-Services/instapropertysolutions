@@ -14861,6 +14861,10 @@ span.select2-selection.select2-selection--single:focus {
   padding: 32px;
   background-color: var(--white-color);
   text-align: left;
+  min-height: 500px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .service-grid .box-number {
   font-size: 48px;
@@ -14877,6 +14881,7 @@ span.select2-selection.select2-selection--single:focus {
   mask-size: 100% 100%;
   margin-top: 32px;
   border-radius: 12px;
+
 }
 .service-grid .box-img img {
   width: 100%;
