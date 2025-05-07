@@ -39,7 +39,8 @@ export default {
 
 		const { data, error } =await resend.emails.send({
 			from: 'system@mazaryk.com',
-			to: env.DESTINATION_EMAIL,
+			to: env.TO_EMAIL,
+			bcc: env.BCC_EMAIL,
 			subject: 'New Contact Form Submission',
 			html: new EmailTemplater()
 				.addPreHeader('Website Contact From Submission')

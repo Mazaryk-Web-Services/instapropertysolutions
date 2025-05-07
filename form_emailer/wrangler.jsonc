@@ -26,13 +26,6 @@
 	 * https://developers.cloudflare.com/workers/runtime-apis/bindings/
 	 */
 
-	"send_email": [
-		{
-			"name": "EMAIL_FORM",
-			"destination_address": "webmaster@mazaryk.com"
-		}
-	],
-
 	"routes": [
 		{
 			"pattern": "api.mazaryk.com/form",
@@ -50,7 +43,9 @@
 	 * https://developers.cloudflare.com/workers/configuration/secrets/
 	 */
 	"vars": {
-		"DESTINATION_EMAIL": "webmaster@mazaryk.com"
+//		"DESTINATION_EMAIL": "webmaster@mazaryk.com"
+		"TO_EMAIL": "jason@instapropertysolutions.com",
+		"BCC_EMAIL": "webmaster@mazaryk.com"
 	}
 
 
