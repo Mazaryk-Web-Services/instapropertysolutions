@@ -840,31 +840,31 @@ Contact Area
                                 <span class="sub-title"><span class="line"></span><img src="assets/img/theme-img/title_icon4.svg" alt="shape">Contact</span>
                                 <h2 class="sec-title">Send us a message</h2>
                             </div>
-                            <form action="/form" method="POST" class="contact-form2 ajax-contact">
+                            <form action="https://api.mazaryk.com/form" method="POST" class="contact-form2 ajax-contact">
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control" name="name" maxlength="50" id="name" placeholder="Your Name">
                                         <i class="fal fa-user"></i>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+                                        <input type="email" class="form-control" name="email" maxlength="40" id="email" placeholder="Email Address">
                                         <i class="fal fa-envelope"></i>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <input type="tel" class="form-control" name="number" id="number" placeholder="Phone Number">
+                                        <input type="tel" class="form-control" name="number" id="number"  maxlength="20" placeholder="Phone Number">
                                         <i class="fal fa-phone"></i>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <select name="subject" id="subject" class="form-select">
                                             <option value="" disabled selected hidden>Select Subject</option>
-                                            <option value="General Query">General Query</option>
+                                            <option value="General Question">General Question</option>
                                             <option value="Help Support">Help Support</option>
                                             <option value="Sales Support">Sales Support</option>
                                         </select>
                                         <i class="fal fa-chevron-down"></i>
                                     </div>
                                     <div class="form-group col-12">
-                                        <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Your Message"></textarea>
+                                        <textarea name="message" id="message" cols="30" rows="3" maxlength="400" class="form-control" placeholder="Your Message"></textarea>
                                         <i class="fal fa-pencil"></i>
                                     </div>
                                     <div class="form-btn col-12">

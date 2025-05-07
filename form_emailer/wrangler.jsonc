@@ -38,7 +38,7 @@
 			"pattern": "api.mazaryk.com/form",
 			"zone_name": "mazaryk.com"
 		}
-	]
+	],
 
 	/**
 	 * Environment Variables
@@ -49,6 +49,10 @@
 	 * Note: Use secrets to store sensitive data.
 	 * https://developers.cloudflare.com/workers/configuration/secrets/
 	 */
+	"vars": {
+		"DESTINATION_EMAIL": "webmaster@mazaryk.com"
+	}
+
 
 	/**
 	 * Static Assets

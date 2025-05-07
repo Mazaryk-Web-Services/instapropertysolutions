@@ -431,11 +431,12 @@
                     type: "POST",
                 })
                 .done(function (response) {
+                    console.log('success', response)
                     // Make sure that the formMessages div has the 'success' class.
                     formMessages.removeClass("error");
                     formMessages.addClass("success");
                     // Set the message text.
-                    formMessages.text(response);
+                    formMessages.text('Contact Information Sent!');
                     // Clear the form.
                     $(
                         form +
@@ -444,13 +445,14 @@
                             " textarea"
                     ).val("");
                 })
-                .fail(function (data) {
+                .catch(function (data) {
+                    console.log('fail', data);
                     // Make sure that the formMessages div has the 'error' class.
                     formMessages.removeClass("success");
                     formMessages.addClass("error");
                     // Set the message text.
-                    if (data.responseText !== "") {
-                        formMessages.html(data.responseText);
+                    if (data.responseJSON) {
+                        formMessages.html(data.responseJSON.error.join(', '));
                     } else {
                         formMessages.html(
                             "Oops! An error occured and your message could not be sent."

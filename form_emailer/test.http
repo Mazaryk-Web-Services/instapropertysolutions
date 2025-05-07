@@ -1,0 +1,26 @@
+### Submit Form
+POST http://localhost:8787
+Content-Type: multipart/form-data boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+Accept: */*
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+Alice
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="email"
+
+alice@example.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="number";
+
+604-652-4179
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="subject";
+
+some subject
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="message";
+
+this is my message with some <b> html sukka
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
