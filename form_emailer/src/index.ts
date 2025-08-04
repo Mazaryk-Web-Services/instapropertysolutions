@@ -3,6 +3,12 @@ import sanitizeHtml from 'sanitize-html';
 import { z } from "zod";
 import EmailTemplater from "./EmailTemplater";
 
+// no html at all
+const config: sanitizeHtml.IOptions = {
+	allowedTags: [], // No tags allowed
+	allowedAttributes: {}, // No attributes allowed
+};
+
 const phoneRegex = new RegExp(
 	/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
 );
@@ -52,7 +58,7 @@ export default {
 				.addText( ` Phone: ${contactForm.number}`)
 				.addText( ` Subject: ${contactForm.subject}`)
 				.addText( ` Message:`)
-				.addText( ` ${sanitizeHtml(contactForm.message)}`)
+				.addText( ` ${sanitizeHtml(contactForm.message, config)}`)
 				.addBlankLine()
 				.addDefaultSignature()
 				.render()

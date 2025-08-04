@@ -43,7 +43,7 @@
 	 * https://developers.cloudflare.com/workers/configuration/secrets/
 	 */
 	"vars": {
-//		"DESTINATION_EMAIL": "webmaster@mazaryk.com"
+//		"TO_EMAIL": "webmaster@mazaryk.com",
 		"TO_EMAIL": "jason@instapropertysolutions.com",
 		"BCC_EMAIL": "webmaster@mazaryk.com"
 	}
