@@ -78,6 +78,8 @@
     }
     </script>
 
+    <link rel="preload" as="image" href="assets/img/hero/1.jpg"/>
+
 </head>
 
 <body>
@@ -91,22 +93,7 @@
    		Code Start From Here
 	******************************** -->
 
-    <!--==============================
-     Preloader
-  ==============================-->
-    <div class="preloader ">
-        <button class="th-btn preloaderCls">Cancel Preloader</button>
-        <div class="preloader-inner">
-            <div class="loader">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
+    <!-- Preloader removed to improve FCP/LCP -->
 <!--    <div class="color-scheme">-->
 <!--        <button class="switchIcon"><i class="fa-solid fa-palette"></i></button>-->
 <!--        <h4 class="color-scheme-title"><i class="far fa-palette"></i> Color Switcher</h4>-->
@@ -202,7 +189,7 @@ Hero Area
                             </div>
                         </div>
                         <div class="hero-img" data-ani="slideinrighthero" data-ani-delay="0.2s">
-                            <img src="assets/img/hero/1.jpg" alt="Image">
+                            <img src="assets/img/hero/1.jpg" alt="Image" fetchpriority="high" decoding="async" loading="eager">
                             <div class="box-badge">
                                 <div class="spin-text">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" preserveAspectRatio="none" xml:space="preserve">
@@ -906,7 +893,7 @@ Contact Area
                         <div class="widget footer-widget">
                             <div class="th-widget-about">
                                 <div class="about-logo">
-                                    <img src="assets/img/insta-property-solutions-logo-with-tagline-inverted-rgb.svg" width="100" alt="InstaProperty Solutions Logo">
+                                    <img src="assets/img/insta-property-solutions-logo-with-tagline-inverted-rgb.svg" width="100" alt="InstaProperty Solutions Logo" loading="lazy" decoding="async">
                                 </div>
                                 <p class="about-text"> We deliver fast, reliable property and grounds management so your business never misses a beat.</p>
 <!--                                <div class="th-social">-->
@@ -986,23 +973,23 @@ Contact Area
     All Js File
 ============================== -->
     <!-- Jquery -->
-    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <script defer src="assets/js/vendor/jquery-3.7.1.min.js"></script>
     <!-- Swiper Js -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script defer src="assets/js/swiper-bundle.min.js"></script>
     <!-- Bootstrap -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script defer src="assets/js/bootstrap.min.js"></script>
     <!-- Magnific Popup -->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script defer src="assets/js/jquery.magnific-popup.min.js"></script>
     <!-- Counter Up -->
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script defer src="assets/js/jquery.counterup.min.js"></script>
     <!-- Tilt -->
-    <script src="assets/js/tilt.jquery.min.js"></script>
+    <script defer src="assets/js/tilt.jquery.min.js"></script>
     <!-- Isotope Filter -->
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script defer src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script defer src="assets/js/isotope.pkgd.min.js"></script>
 
     <!-- Main Js File -->
-    <script src="assets/js/main.js"></script>
+    <script defer src="assets/js/main.js"></script>
 </body>
 
 </html>
