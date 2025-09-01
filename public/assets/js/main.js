@@ -416,7 +416,7 @@
     var invalidCls = "is-invalid";
     var $email = '[name="email"]';
     var $validation =
-        '[name="name"],[name="email"],[name="subject"],[name="number"],[name="message"]'; // Must be use (,) without any space
+        '[name="name"],[name="email"],[name="number"],[name="messageId"]'; // Must be use (,) without any space
     var formMessages = $(".form-messages");
 
     function sendContact() {

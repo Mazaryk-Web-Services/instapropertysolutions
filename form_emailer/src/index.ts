@@ -13,12 +13,17 @@ const phoneRegex = new RegExp(
 	/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
 );
 
+const MESSAGES = [
+	"Question Placeholder 1",
+	"Question Placeholder 2",
+	"Question Placeholder 3",
+] as const;
+
 const formSchema = z.object({
 	name: z.string({required_error: 'Name is required'}).min(1).max(50),
 	email: z.string({required_error: 'Email is required'}).email().max(40),
 	number: z.string({required_error: 'Phone is required'}).max(20).regex(phoneRegex, 'Invalid Phone Number'),
-	subject: z.string({required_error: 'Subject is required'}).min(1).max(50),
-	message: z.string({required_error: 'Message is required'}).min(1).max(400),
+	messageId: z.coerce.number({ required_error: 'MessageId is required' }).int().min(1).max(MESSAGES.length),
 });
 
 type ContactForm = z.infer<typeof formSchema>;
@@ -43,6 +48,8 @@ export default {
 
 		const resend = new Resend(env.RESEND_API_KEY);
 
+		const selectedMessageText = MESSAGES[contactForm.messageId - 1];
+
 		const { data, error } =await resend.emails.send({
 			from: 'system@mazaryk.com',
 			to: env.TO_EMAIL,
@@ -56,16 +63,15 @@ export default {
 				.addText( ` Name: ${contactForm.name}`)
 				.addText( ` Email: ${contactForm.email}`)
 				.addText( ` Phone: ${contactForm.number}`)
-				.addText( ` Subject: ${contactForm.subject}`)
-				.addText( ` Message:`)
-				.addText( ` ${sanitizeHtml(contactForm.message, config)}`)
+				.addText( ` Selected Question (ID ${contactForm.messageId}):`)
+				.addText( ` ${sanitizeHtml(selectedMessageText, config)}`)
 				.addBlankLine()
 				.addDefaultSignature()
 				.render()
 		});
 		if ( error ) {
 			console.log({ data, error });
-			Response.json({data: null, error: 'Failed to deliver message'}, {headers, status: 500});
+			return Response.json({data: null, error: 'Failed to deliver message'}, {headers, status: 500});
 		}
 
 		return Response.json({data: 'ok', error: null}, {headers, status: 200});

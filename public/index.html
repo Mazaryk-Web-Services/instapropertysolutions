@@ -839,18 +839,14 @@ Contact Area
                                         <input type="tel" class="form-control" name="number" id="number"  maxlength="20" placeholder="Phone Number">
                                         <i class="fal fa-phone"></i>
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <select name="subject" id="subject" class="form-select">
-                                            <option value="" disabled selected hidden>Select Subject</option>
-                                            <option value="General Question">General Question</option>
-                                            <option value="Help Support">Help Support</option>
-                                            <option value="Sales Support">Sales Support</option>
-                                        </select>
-                                        <i class="fal fa-chevron-down"></i>
-                                    </div>
                                     <div class="form-group col-12">
-                                        <textarea name="message" id="message" cols="30" rows="3" maxlength="400" class="form-control" placeholder="Your Message"></textarea>
-                                        <i class="fal fa-pencil"></i>
+                                        <select name="messageId" id="messageId" class="form-select" required>
+                                            <option value="" disabled selected hidden>Select a question</option>
+                                            <option value="1">Question Placeholder 1</option>
+                                            <option value="2">Question Placeholder 2</option>
+                                            <option value="3">Question Placeholder 3</option>
+                                        </select>
+                                        <i class="fal fa-list-ul"></i>
                                     </div>
                                     <div class="form-btn col-12">
                                         <button class="th-btn rounded-10">Submit Request<i class="far fa-arrow-right ms-2"></i></button>
