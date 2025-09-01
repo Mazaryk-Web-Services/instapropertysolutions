@@ -1,0 +1,8 @@
+# robots.txt for Insta Property Solutions
+# Generated: 2025-09-01
+# Purpose: Guide search engine crawlers and point them to the sitemap.
+
+User-agent: *
+Disallow:
+
+Sitemap: https://instapropertysolutions.com/sitemap.xml
