@@ -14,9 +14,11 @@ const phoneRegex = new RegExp(
 );
 
 const MESSAGES = [
-	"Question Placeholder 1",
-	"Question Placeholder 2",
-	"Question Placeholder 3",
+	"Do you offer regular lawn care and seasonal maintenance packages?",
+	"Can you help design and install new landscaping features, like flower beds or patios?",
+	"How do you handle weed control, fertilization, and pest management?",
+	"What’s the typical cost and timeline for a full yard cleanup?",
+	"Are you insured and licensed to work on residential and commercial properties?",
 ] as const;
 
 const formSchema = z.object({
