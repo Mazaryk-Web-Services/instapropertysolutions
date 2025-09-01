@@ -46,6 +46,12 @@ export default {
 
 		const contactForm: ContactForm = result.data;
 
+		// Sanitize name to allow only alphanumeric characters (filter out everything else)
+		const sanitizedName = (contactForm.name || '').replace(/[^a-zA-Z0-9]/g, '');
+		if (sanitizedName.length === 0) {
+			return Response.json({ data: null, error: ['Name must contain at least one alphanumeric character'] }, { headers, status: 400 });
+		}
+
 		const resend = new Resend(env.RESEND_API_KEY);
 
 		const selectedMessageText = MESSAGES[contactForm.messageId - 1];
@@ -60,7 +66,7 @@ export default {
 				.addText(`Good Day,`)
 				.addText(`Someone has submitted the following contact information on your website:`)
 				.addBlankLine()
-				.addText( ` Name: ${contactForm.name}`)
+				.addText( ` Name: ${sanitizedName}`)
 				.addText( ` Email: ${contactForm.email}`)
 				.addText( ` Phone: ${contactForm.number}`)
 				.addText( ` Selected Question (ID ${contactForm.messageId}):`)
